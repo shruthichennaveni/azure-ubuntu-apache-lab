@@ -1,0 +1,75 @@
+Azure storage accounts:
+
+Azure Storage is Microsoft’s cloud storage service.It gives you a safe, scalable place to store:
+
+Files
+Images
+Videos
+Logs
+Databases backups
+VM disks
+Big data
+App data
+
+
+
+Types of Azure storage:
+1.Standard general purpose v2
+2.Premium block blobs
+3.Premium file shares
+4.Premium page blobs
+
+
+Types of Azure storage service Types:
+1. Blob(Binary large object)        use it to store- photos, Videos,document,Backups,Website content,Application data,Logs
+    -page Blob --->VM disks
+    -Append Blob --->Logs
+    -Block Blob--->images, documents, backups
+2. Fileshare
+3.Queues
+4.Table  
+5. disk storage  
+
+
+Storage service	                            Endpoint
+============================================================
+Blob Storage                            	https://<storage-account>.blob.core.windows.net
+Static website (Blob Storage)	            https://<storage-account>.web.core.windows.net
+Data Lake Storage	                        https://<storage-account>.dfs.core.windows.net
+Azure Files	                                https://<storage-account>.file.core.windows.net
+Queue Storage	                            https://<storage-account>.queue.core.windows.net
+Table Storage	                            https://<storage-account>.table.core.windows.net
+
+Azure storage redundancy
+1.LRS -Locally redundant storage    3 copies in primary region
+2. Zone-redundant storage (ZRS)        Copies across zones (AZ1, AZ2, AZ3)
+3.Geo-redundant storage (GRS)           Data copied to another region (secondary region)
+4.RA-GRS Read Access Geo-redundant storage (GRS)
+5.Geo-zone-redundant storage (GZRS)     ZRS in primary + GRS backup.
+6.RA-GZRS- Geo-zone-redundant storage 
+
+Performance
+1.Standard
+2.Premium
+
+Access Tiers:
+
+Hot tier - An online tier optimized for storing data that is accessed or modified frequently. 
+        The hot tier has the highest storage costs, but the lowest access costs.
+Cool tier - An online tier optimized for storing data that is infrequently accessed or modified. 
+        Data in the cool tier should be stored for a minimum of 30 days. The cool tier has lower storage costs and higher access costs compared to the hot tier.
+Cold tier - An online tier optimized for storing data that is rarely accessed or modified, 
+        but still requires fast retrieval. Data in the cold tier should be stored for a minimum of 90 days. The cold tier has lower storage costs and higher access costs compared to the cool tier.
+Archive tier - An offline tier optimized for storing data that is rarely accessed, 
+        and that has flexible latency requirements, on the order of hours. Data in the archive tier should be stored for a minimum of 180 days.
+Smart tier - Smart tier automatically moves your data between the hot, cool, 
+        and cold access tiers based on usage patterns, optimizing your costs for these access tiers automatically
+
+ Pricing Basics
+ ============
+Azure Storage pricing depends on:
+Storage type (Blob/File/Table/Queue)
+Redundancy (LRS/ZRS/GRS)
+Access tier (Hot/Cool/Archive)
+Operations (read/write)
+Data egress (transfer out)
